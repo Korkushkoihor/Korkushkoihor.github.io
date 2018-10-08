@@ -1,0 +1,24 @@
+<h1 class="header-tag">Here is hotels page view</h1>
+
+
+<div class="hotels-list">
+
+  <div *ngFor="let item of hotels" class="hotel-block">
+    <div class="hotel-image">
+      <img routerLink="/hotel-view/{{item.ID}}"
+        src="http://api.meetingplannerguide.com/{{item.Images[0]}}"
+        alt="hotel">
+
+      <div class="hotel-name">{{item.Name}}</div>
+
+      <ul>
+        <li>hotel rooms - <span class="data">{{item.NumberOfHotelRooms}}</span></li>
+        <li>max capacity theatre - <span class="data">{{item.SeatingInTheatre}} delegates</span></li>
+        <li>max capacity banquet - <span class="data">{{item.SeatingInBanquet}} delegates</span></li>
+        <li>max capacity reception - <span class="data">{{item.SeatingInReception}} delegates</span></li>
+        <li>distance to city center - <span class="data">{{item.ToCityCenter}}km</span></li>
+        <li>distance to airport - <span class="data">{{item.ToAirport}}km</span></li>
+      </ul>
+    </div>
+  </div>
+</div>

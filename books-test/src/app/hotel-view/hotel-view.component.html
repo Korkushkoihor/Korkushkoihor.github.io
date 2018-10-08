@@ -1,0 +1,50 @@
+<div class="hotel-body">
+
+  <div class="hotel-banner">
+    <img
+      src="http://api.meetingplannerguide.com{{hotel?.Images[0]}}"
+      alt="">
+    <div class="header-tag">Hotel - {{hotel?.Name}}</div>
+  </div>
+
+  <div class="body-description">
+    <div>
+      <div class="participants">
+        <div class="participants-item">Distance to City center: <span class="data">{{hotel?.ToCityCenter}}km</span>
+        </div>
+        <div class="participants-item">Distance to Airport: <span class="data">{{hotel?.ToAirport}}km</span></div>
+        <div class="participants-item">Max capacity theatre: <span
+          class="data">{{hotel?.SeatingInTheatre}} delegates</span></div>
+        <div class="participants-item">Max capacity banquet: <span
+          class="data">{{hotel?.SeatingInBanquet}} delegates</span></div>
+        <div class="participants-item">Max capacity reception: <span class="data">{{hotel?.SeatingInReception}} delegates</span>
+        </div>
+        <div class="participants-item">Hotel rooms: <span class="data">{{hotel?.NumberOfHotelRooms}} rooms</span></div>
+      </div>
+
+
+      <div class="description-hotel">
+        <h1>Description</h1>
+        <div [innerHtml]="hotel?.Description"></div>
+      </div>
+    </div>
+
+    <div class="contact-block">
+
+      <h1>Contacts</h1>
+
+      <div class="logo">
+        <img src="http://api.meetingplannerguide.com{{hotel?.Logo}}" alt="logo">
+      </div>
+
+      <div class="mails">
+        <div>Mail: <span class="data">{{hotel?.Email}}</span></div>
+        <div>Phone: <span class="data">{{hotel?.Telephone}}</span></div>
+        <div>Web: <span class="data">{{hotel?.Website}}</span></div>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
